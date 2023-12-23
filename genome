@@ -1,0 +1,18 @@
+Data filtering
+ -DNBSEQ data
+  -remove reads with a certain proportion of low quality (≤20) bases (40% as default) and of Ns (10% as default)
+  -remove adapter and duplication contamination
+ -PacBio Sequel II data
+  -extract Subreads from Polymerase Reads
+  -filter out adapter sequences
+  -exclude Subreads less than 1,000 bp
+
+Genome assembly
+ -Subreads correction
+  -Canu and Falcon were used to obtain highly reliable corrected reads
+ -Corrected reads assembly
+  -Canu and Falcon were employed respectively to acquire the best assembly result ultimately
+ -Correction of assembly result
+  -GATK was utilized to perform single-base corrections with second-generation sequencing data
+ -Judgment for sequence loop
+ -Discrimination between chromosome and plasmid sequence
