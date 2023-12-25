@@ -1,18 +1,17 @@
-Data filtering
- -DNBSEQ data
-  -remove reads with a certain proportion of low quality (≤20) bases (40% as default) and of Ns (10% as default)
-  -remove adapter and duplication contamination
- -PacBio Sequel II data
-  -extract Subreads from Polymerase Reads
-  -filter out adapter sequences
-  -exclude Subreads less than 1,000 bp
+-For DNBSEQ data
+ -remove reads with a certain proportion of low quality (≤20) bases (40% as default) and of Ns (0.1% as default)
+ -remove adapter and duplication contamination
+-For PacBio Sequel II data
+ -subreads were extracted from polymerase reads
+ -subreads less than 1,000 bp were excluded
+ -highly accurate circular consensus sequencing (CCS) data was obtained from subreads by SMRT Analysis
 
-Genome assembly
- -Subreads correction
+-For genome assembly
+ -subreads correction
   -Canu and Falcon were used to obtain highly reliable corrected reads
- -Corrected reads assembly
+ -corrected reads assembly
   -Canu and Falcon were employed respectively to acquire the best assembly result ultimately
- -Correction of assembly result
-  -GATK was utilized to perform single-base corrections with second-generation sequencing data
- -Judgment for sequence loop
- -Discrimination between chromosome and plasmid sequence
+ -correction of assembly result
+  -GATK was utilized to perform single-base corrections with second-generation sequencing data, enhancing the reliability of the assembly sequence
+ -judgment for sequence loop
+ -discrimination between chromosome and plasmid sequence
