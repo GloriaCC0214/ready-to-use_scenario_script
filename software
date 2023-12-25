@@ -10,6 +10,13 @@ v0.3.0
 -v -dal8 -t32 -h60 -e.96 -l500 -s100 -H3000
 https://github.com/PacificBiosciences/falco
 
+SMRT Analysis
+v2.3.0
+estn=24
+nproc=8
+cov=6
+https://github.com/PacificBiosciences/SMRT-Analysis/wiki/SMRT-PipeReference-Guide-v2.3.0
+
 GATK
 3.4-0-g7e26428
 -cluster 2 -window 5 -stand_call_conf 50 -stand_emit_conf 10.0 -dcov 200 MQ0 >= 4
